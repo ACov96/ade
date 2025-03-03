@@ -1,0 +1,12 @@
+[submodule "external/tabbed"]
+	path = external/tabbed
+	url = https://github.com/ACov96/tabbed.git
+[submodule "external/st"]
+	path = external/st
+	url = https://github.com/ACov96/st.git
+[submodule "external/dwm"]
+	path = external/dwm
+	url = https://github.com/ACov96/dwm.git
+[submodule "external/dmenu"]
+	path = external/dmenu
+	url = https://github.com/ACov96/dmenu.git
