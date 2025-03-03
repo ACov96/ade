@@ -1,0 +1,5 @@
+* Alex's Development Environment
+
+This is my (mostly) portable Linux configuration. It includes scripts and utilties that I regularly use when developing on Linux.
+
+I do my best to document everything, but this is just a personal config. If you are unsure of how something is set up, it is likely faster to just read through the different config files than asking questions.
