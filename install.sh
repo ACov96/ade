@@ -18,3 +18,5 @@ if [ -e "$HOME/.local/scripts" ]; then
 fi
 
 ln -s $(pwd)/src $HOME/.local/scripts
+
+sudo ./src/build_external.sh
