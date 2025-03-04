@@ -48,24 +48,30 @@ fi
 ###########
 # Battery #
 ###########
-batteryPercentage=$(cat /sys/class/power_supply/BAT0/capacity)
-batteryStatus=$(cat /sys/class/power_supply/BAT0/status)
 
-case $batteryStatus in
-	"Discharging")
-		batteryIcon=$([[ $batteryPercentage -le 20 ]] && echo "🪫" || echo "🔋")
-		;;
-	"Charging")
-		batteryIcon="🔌"
-		;;
-	"Full")
-		batteryIcon="⚡"
-		;;
-	*)
-		batteryIcon="($batteryStatus)"
-		;;
-esac
-batteryOutput="$batteryPercentage% $batteryIcon"
+batteryPath=$(compgen -G "/sys/class/power_supply/BAT*/" | head -n1)
+if [ -n $batteryPath ]; then
+    batteryPercentage=$(cat $batteryPath/capacity)
+    batteryStatus=$(cat $batteryPath/status)
+    
+    case $batteryStatus in
+    	"Discharging")
+    		batteryIcon=$([[ $batteryPercentage -le 20 ]] && echo "🪫" || echo "🔋")
+    		;;
+    	"Charging")
+    		batteryIcon="🔌"
+    		;;
+    	"Full")
+    		batteryIcon="⚡"
+    		;;
+    	*)
+    		batteryIcon="($batteryStatus)"
+    		;;
+    esac
+    batteryOutput="$batteryPercentage% $batteryIcon"
+else
+    batteryOutput="No battery"
+fi
 
 #################
 # Date and Time #
