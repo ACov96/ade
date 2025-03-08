@@ -10,3 +10,6 @@
 [submodule "external/dmenu"]
 	path = external/dmenu
 	url = https://github.com/ACov96/dmenu.git
+[submodule "external/aesthetic-wallpapers"]
+	path = external/aesthetic-wallpapers
+	url = https://github.com/D3Ext/aesthetic-wallpapers

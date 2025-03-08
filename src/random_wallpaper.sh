@@ -1,4 +1,6 @@
 #!/bin/bash
 
-feh --bg-fill --randomize ~/.local/wallpapers/*
+SCRIPT_PATH="$(dirname "$(realpath "$0")")"
+
+feh --bg-fill --randomize $SCRIPT_PATH/../external/aesthetic-wallpapers/images/
 
